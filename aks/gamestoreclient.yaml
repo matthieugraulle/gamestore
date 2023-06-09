@@ -16,8 +16,10 @@ spec:
     spec:
       containers:
         - name: gamestoreclient
-          image: mlebowskit/gamestoreclient:latest
+          image: gamestoreacr.azurecr.io/gamestoreclient:v1
           imagePullPolicy: IfNotPresent
+          imagePullSecrets:
+            - name: acr-secret
           ports:
             - containerPort: 80
           env:
@@ -41,11 +43,9 @@ kind: Service
 metadata:
   name: gamestoreclient-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: gamestoreclient
   ports:
     - protocol: TCP
-      port: 8001
-      targetPort: 80
-      nodePort: 30000
+      port: 80

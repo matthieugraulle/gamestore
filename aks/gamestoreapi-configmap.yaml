@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: gamestoreapi-configmap
 data:
-  gamestoreapi_url: http://gamestoreapi-service:8000
+  gamestoreapi_url: http://gamestoreapi-service
