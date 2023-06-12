@@ -23,7 +23,7 @@ spec:
           env:
             - name: ASPNETCORE_ENVIRONMENT
               value: Development
-            - name: gamestoreAPIUrl
+            - name: GamestoreAPIUrl
               valueFrom:
                   configMapKeyRef:
                     name: gamestoreapi-configmap
