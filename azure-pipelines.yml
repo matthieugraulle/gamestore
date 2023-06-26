@@ -13,7 +13,7 @@ variables:
   dockerRegistryServiceConnection: '098650d6-df39-43ec-972d-d3b38edb9dee'
   imageRepository: 'gamestorerundevops'
   containerRegistry: 'gamestoreacr.azurecr.io'
-  dockerfilePath: '$(Build.SourcesDirecory)/gamestore/Gamestore.API/Dockerfile'
+  dockerfilePath: '$(Build.SourcesDirectory)/gamestore/Gamestore.API/Dockerfile'
   tag: '$(Build.BuildId)'
 
   # Agent VM image name
