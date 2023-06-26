@@ -38,4 +38,3 @@ stages:
         buildContext: $(Build.SourcesDirectory)/gamestore
         tags: |
           $(tag)
-LOL
